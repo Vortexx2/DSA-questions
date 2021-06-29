@@ -1,3 +1,10 @@
+/**
+ * @file iterative.cpp
+ * @author Vortexx2
+ * @brief Problem 2 - Add Two Numbers. Iterative approach.
+ * @date 29-06-2021
+ * 
+ */
 #include <iostream>
 
 struct ListNode
