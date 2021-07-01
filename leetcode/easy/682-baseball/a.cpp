@@ -1,3 +1,12 @@
+/**
+ * @file a.cpp
+ * @author Vortexx2
+ * @brief Problem 682 - Baseball Game
+ * @date 01-07-2021
+ * 
+ * Runtime - 4 ms
+ * Memory Usage - 8.3 MB
+ */
 #include <iostream>
 #include <vector>
 #include <string>
