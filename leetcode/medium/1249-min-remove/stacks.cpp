@@ -6,6 +6,8 @@
  * stack is empty, meaning only if there are no open ( present.
  * @date 05-07-2021
  * 
+ * Runtime - 28 ms
+ * Memory Usage - 11.6 MB
  */
 #include <iostream>
 #include <stack>
