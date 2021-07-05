@@ -25,7 +25,7 @@ public:
     {
       if (isalnum(ch))
       {
-        temp += tolower(ch);
+        temp += toupper(ch);
       }
     }
 
