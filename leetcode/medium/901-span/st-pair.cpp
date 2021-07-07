@@ -6,35 +6,24 @@ using namespace std;
 class StockSpanner
 {
 public:
+  // res, price
   stack<pair<int, int>> st;
-  int len;
   StockSpanner()
   {
-    len = 0;
   }
 
   int next(int price)
   {
-    len++;
-    int P;
+    int res = 1;
 
     while (!st.empty() && price >= st.top().second)
     {
+      res += st.top().first;
       st.pop();
     }
 
-    if (st.empty())
-    {
-      P = 0;
-    }
-
-    else
-    {
-      P = st.top().first;
-    }
-    st.push(make_pair(len, price));
-
-    return (len - P);
+    st.push({res, price});
+    return res;
   }
 };
 
