@@ -6,7 +6,7 @@
  * Don't know why this is not less space than the stacks approach.
  * @date 08-07-2021
  * 
- * Runtime - 264 ms
+ * Runtime - 120 ms
  * Memory Usage - 85.1 MB 
  */
 #include <iostream>
