@@ -1,3 +1,12 @@
+/**
+ * @file o(1).cpp
+ * @author Vortexx2
+ * @brief 
+ * @date 17-07-2021
+ * 
+ * Runtime - 0 ms
+ * Memory Usage - 7 MB
+ */
 #include <iostream>
 #include <vector>
 #include <deque>
