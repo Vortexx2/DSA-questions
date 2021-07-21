@@ -45,7 +45,6 @@ public:
 
     while (true)
     {
-
       while (root)
       {
         res.push_back(root->val);

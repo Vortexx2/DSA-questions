@@ -1,7 +1,7 @@
 """
   @author Vortexx2
 
-  Runtime - 24 ms
+  Runtime - 28 ms
   Memory Usage - 14.2 MB
 """
 from typing import List
