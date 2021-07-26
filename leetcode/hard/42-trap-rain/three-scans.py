@@ -5,7 +5,6 @@
   Memory Usage - 14.8 MB
 """
 from typing import List
-from collections import deque
 
 
 class Solution:
