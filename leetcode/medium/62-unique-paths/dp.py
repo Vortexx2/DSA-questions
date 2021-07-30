@@ -2,24 +2,15 @@
   @author Vortexx2
   Problem 62 - Unique Paths
 
-  Runtime - 24 ms
+  Runtime - 28 ms
   Memory Usage - 14.3 MB
 """
-from typing import List, Dict
-
-
 class Solution:
-  def uniquePaths(self, m: int, n: int, dp={}) -> int:
+  def uniquePaths(self, m: int, n: int) -> int:
+    dp = [[1] * n] * m
 
-    if not m or not n:
-      return 0
+    for i in range(1, m):
+      for j in range(1, n):
+        dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
 
-    if m == 1 or n == 1:
-      return 1
-
-    key = str(m) + ',' + str(n)
-    if key in dp:
-      return dp[key]
-
-    dp[key] = self.uniquePaths(m - 1, n, dp) + self.uniquePaths(m, n - 1, dp)
-    return dp[key]
+    return dp[m - 1][n - 1]
