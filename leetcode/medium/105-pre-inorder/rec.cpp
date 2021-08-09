@@ -3,12 +3,14 @@
  * @author Vortexx2
  * @brief Problem 105 - Construct Binary Tree From Preorder and Inorder
  * @date 10-08-2021
+ * Adding a map decreases runtime from 36 ms to 8 ms
  * 
- * Runtime - 36 ms
- * Memory Usage - 26.1 MB
+ * Runtime - 8 ms
+ * Memory Usage - 26.4 MB
  */
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 
 using namespace std;
 
@@ -26,11 +28,14 @@ class Solution
 {
 public:
   int index;
+  unordered_map<int, int> dic;
   TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder)
   {
     if (!preorder.size())
       return nullptr;
     index = 0;
+    for (int i = 0; i < inorder.size(); i++)
+      dic.insert({inorder[i], i});
     return helper(preorder, inorder, 0, preorder.size());
   }
 
@@ -43,7 +48,7 @@ public:
       return new TreeNode(preorder[index]);
     }
 
-    int i = start;
+    int i = dic[preorder[index]];
     while (i < end)
     {
       if (inorder[i] == preorder[index])
