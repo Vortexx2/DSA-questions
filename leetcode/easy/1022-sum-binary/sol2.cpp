@@ -5,7 +5,7 @@
  * @approach Adding current path binary value to the answer when encountering a leaf node, rather than making 2 passes like sol.cpp.
  * @date 13-08-2021
  * 
- * Runtime - 8 ms
+ * Runtime - 3 ms
  * Memory Usage - 16.7 MB
  */
 #include <iostream>
@@ -31,36 +31,25 @@ public:
   int ans;
   int sumRootToLeaf(TreeNode *root)
   {
-    vector<int> path;
     ans = 0;
-    writePaths(root, path);
+    writePaths(root, 0);
 
     return ans;
   }
 
-  int binaryToInt(vector<int> &path)
-  {
-    int num = 0;
-    for (int i = 0; i < path.size(); i++)
-      num += (path[i] * pow(2, path.size() - i - 1));
-    return num;
-  }
-
-  void writePaths(TreeNode *root, vector<int> &path)
+  void writePaths(TreeNode *root, int running)
   {
     if (!root)
       return;
 
-    path.push_back(root->val);
+    running = running << 1 | root->val;
     if (!root->left && !root->right)
-      ans += binaryToInt(path);
+      ans += running;
 
     else
     {
-      writePaths(root->left, path);
-      writePaths(root->right, path);
+      writePaths(root->left, running);
+      writePaths(root->right, running);
     }
-
-    path.pop_back();
   }
 };

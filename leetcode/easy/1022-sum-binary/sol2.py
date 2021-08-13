@@ -2,8 +2,8 @@
   @author Vortexx2
   Problem 1022
 
-  Runtime - 36 ms
-  Memory Usage - 14.7 MB
+  Runtime - 43 ms
+  Memory Usage - 14.3 MB
 """
 from typing import Optional, List
 
@@ -18,31 +18,22 @@ class TreeNode:
 
 class Solution:
   def sumRootToLeaf(self, root: Optional[TreeNode]) -> int:
-    path = []
 
     self.ans = 0
-    self.writePaths(root, path)
+    self.writePaths(root, 0)
 
-    return self. ans
+    return self.ans
 
-  def binaryToInt(self, arr: List[int]) -> int:
-    res = 0
-    for el in arr:
-      res = res << 1 | el
-
-    return res
-
-  def writePaths(self, root: TreeNode, path: List[int]) -> None:
+  def writePaths(self, root: TreeNode, running: int) -> None:
 
     if not root:
       return
 
-    path.append(root.val)
+    running = running << 1 | root.val
+
     if not root.left and not root.right:
-      self.ans += self.binaryToInt(path)
+      self.ans += running
 
     else:
-      self.writePaths(root.left, path)
-      self.writePaths(root.right, path)
-
-    path.pop()
+      self.writePaths(root.left, running)
+      self.writePaths(root.right, running)
