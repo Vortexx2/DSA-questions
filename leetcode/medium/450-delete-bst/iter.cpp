@@ -4,8 +4,8 @@
  * @brief Problem 450 - Delete Node in BST
  * @date 25-08-2021
  * 
- * Runtime - 32 ms
- * Memory Usage - 32.5 MB
+ * Runtime - 32 ms O(logn)
+ * Memory Usage - 32.5 MB O(1)
  */
 #include <climits>
 #include <iostream>
