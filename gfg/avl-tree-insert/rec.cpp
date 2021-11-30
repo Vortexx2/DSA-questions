@@ -29,8 +29,6 @@ Node* newNode(int data, Node* left = nullptr, Node* right = nullptr) {
   return nNode;
 }
 
-// 9
-// 850 859 912 50 218 545 815 22 903
 class Solution {
  public:
   /*You are required to complete this method */

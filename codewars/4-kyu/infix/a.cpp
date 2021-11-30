@@ -73,7 +73,7 @@ std::string to_postfix(std::string infix)
 
 int main()
 {
-  string s = "1+2+3";
+  string s = "(1+2)*5/3";
 
   cout << to_postfix(s) << endl;
 }
