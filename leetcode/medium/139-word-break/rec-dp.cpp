@@ -7,7 +7,7 @@
  * sell at each stage.
  * @date 12-07-2022
  *
- * Runtime - 390 ms
+ * Runtime - 258 ms
  * Memory Usage - 57.4 MB
  */
 #include <iostream>
@@ -52,14 +52,10 @@ class Solution {
     if (dp.find({i, currWord}) != dp.end()) return dp[{i, currWord}];
 
     if (isValidWord(currWord)) {
-      // buy
-      bool a = dfs(s, currWord, i + 1);
-
-      // sell
-      bool b = dfs(s, "", i + 1);
-
-      dp[{i, currWord}] = a || b;
-      return a || b;
+      dp[{i, currWord}] =
+          dfs(s, currWord, i + 1)  // buy at the current valid word
+          || dfs(s, "", i + 1);    // sell at the current valid word
+      return dp[{i, currWord}];
     }
 
     // if currWord is not valid, we'll need to include the current character
