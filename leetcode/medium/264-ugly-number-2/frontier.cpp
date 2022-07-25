@@ -5,8 +5,8 @@
  * @approach Using a frontier approach
  * @date 25-07-2022
  *
- * Runtime - 267 ms
- * Memory Usage - 29.6 MB
+ * Runtime - 267 ms O(nlogn)
+ * Memory Usage - 29.6 MB O(n)
  */
 #include <iostream>
 #include <map>
