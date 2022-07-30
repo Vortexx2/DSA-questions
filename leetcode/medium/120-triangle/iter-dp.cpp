@@ -6,8 +6,8 @@
  * the previous row to be able to calculate the optimum path.
  * @date 30-07-2022
  *
- * Runtime - 4 ms
- * Memory Usage - 8.9 MB
+ * Runtime - 4 ms O(n ^ 2)
+ * Memory Usage - 8.9 MB O(n)
  */
 #include <climits>
 #include <iostream>
