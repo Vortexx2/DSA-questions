@@ -7,8 +7,8 @@
  * video: https://www.youtube.com/watch?v=XYQecbcd6_c)
  * @date 09-08-2022
  *
- * Runtime - 25 ms
- * Memory Usage - 19 MB
+ * Runtime - 25 ms O(n ^ 2)
+ * Memory Usage - 19 MB O(1)
  */
 #include <iostream>
 
