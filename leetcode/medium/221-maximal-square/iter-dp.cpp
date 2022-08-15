@@ -4,7 +4,7 @@
  * @brief Problem 221 - Maximal Square
  * @approach Tabulation DP approach with the least memory possible
  * @date 07-08-2022
- * 
+ *
  * Runtime - 101 ms O(m * n)
  * Memory Usage - 18 MB O(n)
  */
@@ -29,17 +29,15 @@ class Solution {
 
         else {
           // if it is not the last column and char is 1
-          if (j != n - 1) {
+          if (j != n - 1)
             currRow[j] =
                 1 + min(currRow[j + 1], min(prevRow[j], prevRow[j + 1]));
-            maxSide = max(maxSide, currRow[j]);
-          }
 
           // if it is the last column and char is 1
-          else {
+          else
             currRow[j] = 1;
-            maxSide = max(maxSide, 1);
-          }
+
+          maxSide = max(maxSide, currRow[j]);
         }
       }
 
