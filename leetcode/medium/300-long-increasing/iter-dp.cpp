@@ -25,6 +25,8 @@ class Solution {
     int maxSubLength = 1;
 
     for (int i = 1; i < n; i++) {
+
+      // second loop runs from 0-i, by the end figuring out the longest subsequence for the ith index
       for (int j = 0; j < i; j++) {
         if (nums[i] > nums[j] && increasingSub[i] <= increasingSub[j]) {
           increasingSub[i] = 1 + increasingSub[j];
