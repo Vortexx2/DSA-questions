@@ -22,11 +22,11 @@ class Solution {
 
     if (n < 2) return n;
 
-    // longest subsequence that ends at that index with a positive wiggle as the
-    // last wiggle
+    // longest subsequence that is contained till that index where the last
+    // wiggle is a positive wiggle
     vector<int> ups(n, 1);
-    // longest subsequence that ends at that index with a negative wiggle as the
-    // last wiggle
+    // longest subsequence that is contained till that index where the last
+    // wiggle is a negative wiggle
     vector<int> downs(n, 1);
 
     for (int i = 1; i < n; i++) {
@@ -46,6 +46,9 @@ class Solution {
       }
     }
 
+    // one of ups[n - 1] or downs[n - 1] will have the maximum length possible,
+    // since it will keep on getting carried forward to one of the values
+    // regardless of
     return max(ups[n - 1], downs[n - 1]);
   }
 };
