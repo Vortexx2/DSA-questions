@@ -1,3 +1,13 @@
+/**
+ * @file lin-dp.cpp
+ * @author Vortexx2
+ * @brief Problem 376 - Wiggle Subsequence
+ * @approach Using a linear DP approach
+ * @date 26-08-2022
+ * 
+ * Runtime - 5 ms O(n)
+ * Memory Usage - 7.3 MB O(n)
+ */
 #include <iostream>
 #include <vector>
 
