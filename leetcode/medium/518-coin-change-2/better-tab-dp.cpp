@@ -26,7 +26,7 @@ class Solution {
     vector<int> prevRow(amount + 1, 0), currRow(amount + 1, 0);
 
     for (int j = n - 1; j >= 0; j--) {
-      for (int subAmount = coins[0]; subAmount <= amount; subAmount++) {
+      for (int subAmount = coins[j]; subAmount <= amount; subAmount++) {
         if (coins[j] == subAmount) currRow[subAmount] = 1;
 
         if (coins[j] < subAmount) {
