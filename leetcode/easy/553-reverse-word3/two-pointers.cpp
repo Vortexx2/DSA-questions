@@ -5,7 +5,7 @@
  * @approach Using 2 pointers, by reversing each word iteratively
  * @date 07-10-2022
  * 
- * Runtime - 26 ms O(n ^ 2)
+ * Runtime - 26 ms O(n)
  * Memory Usage - 13.2 MB O(1)
  */
 #include <iostream>
