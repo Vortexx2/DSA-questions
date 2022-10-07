@@ -6,7 +6,7 @@
  * @date 06-10-2022
  * 
  * Runtime - 20 ms O(n)
- * Memory Usage - 23.3 MB O(1)
+  * Memory Usage - 23.3 MB O(1)
  */
 #include <iostream>
 #include <vector>
