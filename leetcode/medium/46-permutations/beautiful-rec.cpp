@@ -1,3 +1,13 @@
+/**
+ * @file beautiful-rec.cpp
+ * @author Vortexx2
+ * @brief Problem 46 - Permutations
+ * @approach using a simple swapping approach
+ * @date 15-10-2022
+ * 
+ * Runtime - 5 ms O(n !)
+ * Memory Usage - 7.4 MB O(1)
+ */
 #include <iostream>
 #include <vector>
 
