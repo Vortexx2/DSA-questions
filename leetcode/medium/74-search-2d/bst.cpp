@@ -5,6 +5,8 @@
  * @approach Using a BST type approach
  * @date 22-10-2022
  * 
+ * Runtime - 3 ms O(log(m) + log(n))
+ * Memory Usage - 9.6 MB O(1)
  */
 #include <climits>
 #include <iostream>

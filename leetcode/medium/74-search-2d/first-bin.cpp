@@ -1,3 +1,13 @@
+/**
+ * @file first-bin.cpp
+ * @author Vortexx2
+ * @brief Problem 74 - Search a 2D Matrix
+ * @approach Using binary search in 2 directions - vertically and horizontally
+ * @date 22-10-2022
+ * 
+ * Runtime - 7 ms O(log(m) + log(n))
+ * Memory Usage - 9.6 MB O(1)
+ */
 #include <climits>
 #include <iostream>
 #include <vector>
