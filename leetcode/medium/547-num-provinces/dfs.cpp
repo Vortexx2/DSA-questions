@@ -4,7 +4,7 @@
  * @brief Problem 547 - Number of Provinces
  * @approach - Using DFS
  * @date 06-11-2022
- * 
+ *
  * Runtime - 28 ms O(n * n)
  * Memory Usage - 13.6 MB O(n)
  */
@@ -42,9 +42,8 @@ class Solution {
   void dfs(vector<vector<int>>& graph, vector<bool>& visited, int pos) {
     if (visited[pos]) return;
 
+    visited[pos] = true;
     for (int i = 0; i < graph.size(); i++) {
-      visited[pos] = true;
-
       if (graph[pos][i]) dfs(graph, visited, i);
     }
   }
