@@ -1,3 +1,12 @@
+/**
+ * @file sol.cpp
+ * @author Vortexx2
+ * @brief Problem 396 - Rotate Function
+ * @date 31-12-2022
+ * 
+ * Runtime - 161 ms O(n)
+ * Memory Usage - 95.8 MB O(1)
+ */
 #include <bits/stdc++.h>
 
 using namespace std;
