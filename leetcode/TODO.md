@@ -15,3 +15,13 @@ _Monotonic Stack_
 243. Online Stock Span - ✅
 244. Sum of Subarray Minimums
 245. Delivering Boxes from Storage to Ports
+
+
+### Topics to Study
+
+##### Tries
+##### Segment Trees
+##### Fenwick Trees
+##### Union Find and Disjoint Sets
+  1061. Lexicographically Smallest Equivalent String
+  2421. Number of Good Paths
