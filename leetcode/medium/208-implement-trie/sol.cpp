@@ -8,62 +8,53 @@
 
 using namespace std;
 
+int charToInt(char c) { return (int)(c - 'a'); }
+
 class TrieNode {
  public:
   bool terminal;
-  vector<TrieNode *> children = vector<TrieNode *>(26, nullptr);
+  vector<TrieNode*> children = vector<TrieNode*>(26, nullptr);
 
   TrieNode() { terminal = false; }
 };
 
-int charToInt(char c) { return ((int)c - (int)'a'); }
-
 class Trie {
- public:
-  TrieNode *root;
+ private:
+  TrieNode* root;
 
+ public:
   Trie() { root = new TrieNode(); }
 
   void insert(string word) {
-    int i = 0, n = word.size();
-    TrieNode *curr = root, *next;
+    TrieNode *curr = root, *nextNode;
 
-    while (i < n) {
-      next = curr->children[charToInt(word[i])];
-      if (next)
-        curr = next;
+    for (auto& c : word) {
+      nextNode = curr->children[charToInt(c)];
 
-      else {
-        printf("char i (%d): %c\n", i, word[i]);
-        next = new TrieNode();
-        curr->children[charToInt(word[i])] = next;
-        curr = next;
-      }
-
-      i++;
-    }
-
-    next->terminal = true;
-  }
-
-  bool search(string word) {
-    int n = word.size();
-    TrieNode *curr = root;
-
-    for (auto &c : word) {
-      if (!curr) return false;
+      if (!nextNode) curr->children[charToInt(c)] = new TrieNode();
 
       curr = curr->children[charToInt(c)];
     }
 
-    return curr && curr->terminal;
+    curr->terminal = true;
+  }
+
+  bool search(string word) {
+    TrieNode* currNode = root;
+
+    for (auto& c : word) {
+      if (!currNode) return false;
+
+      currNode = currNode->children[charToInt(c)];
+    }
+
+    return (currNode && currNode->terminal);
   }
 
   bool startsWith(string prefix) {
-    int n = prefix.size();
-    TrieNode *curr = root;
+    TrieNode* curr = root;
 
-    for (auto &c : prefix) {
+    for (auto& c : prefix) {
       if (!curr) return false;
 
       curr = curr->children[charToInt(c)];
