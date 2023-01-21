@@ -1,3 +1,12 @@
+/**
+ * @file rec-set.cpp
+ * @author Vortexx2
+ * @brief Problem 491 - Non-decreasing Subsequences
+ * @date 21-01-2023
+ * 
+ * Runtime - 73 ms
+ * Memory Usage - 22.2 MB
+ */
 #include <bits/stdc++.h>
 
 using namespace std;
