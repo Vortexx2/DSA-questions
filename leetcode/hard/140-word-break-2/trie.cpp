@@ -1,3 +1,13 @@
+/**
+ * @file trie.cpp
+ * @author Vortexx2
+ * @brief Problem 140 - Word Break 2
+ * @approach Using tries and backtracking
+ * @date 06-02-2023
+ * 
+ * Runtime - 0 ms O(n)
+ * Memory Usage - 7.4 MB
+ */
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -110,7 +120,7 @@ class Solution {
       currWord = "";
 
       helper(t->root, index + 1, currWord);
-      
+
       sentence = oldSentence;
       currWord = oldCurrWord;
     }
