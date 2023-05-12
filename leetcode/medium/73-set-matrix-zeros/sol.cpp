@@ -6,7 +6,7 @@
  * @date 12-05-2023
  * 
  * Runtime - 17 ms O(m * n)
- * Memory Usage - 13.3 MB O(numZeros)
+ * Memory Usage - 13.3 MB O(m + n)
  */
 #include <bits/stdc++.h>
 
