@@ -28,9 +28,11 @@ class Solution {
 
     // fix one element and perform 2 Sum on the remaining elements
     for (int first = 0; first < n - 2; first++) {
+      // all of the valid combinations have been explored already
       if (first > 0 && nums[first] == nums[first - 1]) continue;
 
-      if (nums[first] > 0) break;
+      // if first num is positive, impossible to sum to 0
+      if (nums[first] >= 0) break;
 
       int target = -nums[first];
 
